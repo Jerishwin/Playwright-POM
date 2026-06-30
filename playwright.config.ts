@@ -4,7 +4,8 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'always' }],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['allure-playwright', { resultsDir: 'allure-results' }],
   ],
   //fullyParallel:true,
 
