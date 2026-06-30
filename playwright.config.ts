@@ -19,6 +19,12 @@ export default defineConfig({
     trace: 'on',
     screenshot: 'only-on-failure',
     video:'on'
-  }
+  },
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ]
 
 });
