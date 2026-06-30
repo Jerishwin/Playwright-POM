@@ -1,7 +1,7 @@
 import { test,expect} from '../fixtures/baseFixture.js';
 import loginData from "../test-data/loginData.json" with { type: "json" } ;
 
-test.describe("Login Test",()=>{
+test.describe("Login Test @orange",()=>{
 
     test.beforeEach(async({loginPage})=>{
         await loginPage.navigate()

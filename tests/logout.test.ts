@@ -1,9 +1,7 @@
 import {test,expect} from '../fixtures/baseFixture.js'
-import { DashboardPage } from '../pages/DashboardPage.js';
-import { LoginPage } from '../pages/LoginPage.js';
 import loginData from '../test-data/loginData.json'with {type:'json'};
 
-test.describe("Logout Test",()=>{
+test.describe("Logout Test @orange",()=>{
     test.beforeEach(async({loginPage})=>{
         await loginPage.navigate();
 
@@ -14,6 +12,8 @@ test.describe("Logout Test",()=>{
     })
 
     test("Log Out @logout",async({dashboardPage,loginPage})=>{
+
+        await expect(dashboardPage.quickLaunch).toBeVisible();
         await dashboardPage.logout()
 
         await expect(loginPage.loginTitle).toContainText("Login")
