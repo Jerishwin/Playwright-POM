@@ -1,8 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 
-//const envName = process.env.ENV||'chrome';
-//dotenv.config({ path: `./env/.env.${envName}` });
+const envName = process.env.ENV||'chrome';
+dotenv.config({ path: `./env/.env.${envName}` });
 
 
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
   //fullyParallel:true,
   //timeout:50000,
   use: {
-    browserName:process.env.BROWSER || 'chromium',
+    browserName:process.env.BROWSER,
     headless: true,
     viewport: null,
     launchOptions: {

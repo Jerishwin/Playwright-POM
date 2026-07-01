@@ -12,7 +12,7 @@ export interface LoginUser {
 }
 
 export function readLoginData(): LoginUser[] {
-    const filePath = path.resolve(__filename, "../test-data/loginCsv.csv");
+    const filePath = path.resolve(__filename, "../../test-data/loginCsv.csv");
     const fileContent = fs.readFileSync(filePath, 'utf-8');
 
     return parse(fileContent, {
